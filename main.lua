@@ -3,6 +3,8 @@ local vector = require("vector")
 
 BACKGROUND = { 0.1, 0.1, 0.1 }
 
+local laserSound = love.audio.newSource('sounds/laser.mp3', 'static')
+
 function Copy(obj, seen)
 	if type(obj) ~= "table" then
 		return obj
@@ -238,6 +240,9 @@ local function laser(s, f)
 		-- sinZap(start + 5, finish, 5, 0)
 		simpleZap(s, f, 0)
 	end)
+    if laserP > 0.3 then
+        laserSound:play()
+    end
 end
 
 function love.draw()
