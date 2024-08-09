@@ -1,0 +1,7 @@
+{
+    "workspace": {
+        "library": [
+            "~/.local/share/lua-language-server/meta/3rd/love2d/"
+        ]
+    }
+}
