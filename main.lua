@@ -68,6 +68,12 @@ local function clip(s, e, f)
 	end
 end
 
+function love.keypressed(key)
+    if key == 'escape' or key == 'q' then
+        love.event.quit()
+    end
+end
+
 function love.update(dt)
 	laserP = math.fmod(laserP + laserSpeed * dt, 1)
 	clip(0.3, 1, function(_)
